@@ -1,0 +1,135 @@
+{
+  "navbar": {
+    "home": "Home",
+    "ourProducts": "Our Products",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "contactUs": "Contact us",
+    "switchToMarathi": "मराठी"
+  },
+
+  "awards": [
+    {
+      "name": "DST NIDHI EIR Scheme",
+      "text": "Received 3.6 lakh Fellowship under the DST NIDHI EIR Scheme at COEP’S Bhau Institute, Pune. Appreciated by the Director RIT Dr. Mrs. Sushma Kulkarni."
+    },
+    {
+      "name": "SDG Innovation challenge 2021",
+      "text": "SDG Innovation challenge 2021 arranged by Taiwan National University Kaohsiung. Grabbed Rising Star Award with 600 USD prize money and certification. (International)"
+    },
+    {
+      "name": "IBF Expo 2023",
+      "text": "STARKTECH presented, Starktech CHAMP R5 to our hon. Former Minister for Water Resources, Shri Jayant Patil ji, and hon. Former Minister for Medical Education, Shri Amit Deshmukh Ji at IBF Expo 2023."
+    },
+    {
+      "name": "RKVY-RAFTAR (Cohort 9)",
+      "text": "Successfully completed 2 months of training under the Ministry of Agriculture & Farmers Welfare, Government of India at MANAGE-CIA, Hyderabad. Agri-Startup Innovation & Incubation Program under RKVY-RAFTAR (Cohort 9)."
+    },
+    {
+      "name": "Global Entrepreneurship Exchange program GE2",
+      "text": "Third prize winner in Global Entrepreneurship Exchange program GE2 organized by University of Massachusetts Lowell, United States. (International)"
+    },
+    {
+      "name": "BUSINESS IDEA CONTEST (BIC) 2022",
+      "text": "Our startup has been awarded the third prize at the BUSINESS IDEA CONTEST (BIC) 2022, organized by Bharatiya Yuva Shakti Trust – HDFC Bank Parivartan, Sangli."
+    },
+    {
+      "name": "Pudhari Agri Pandhari Expo Season 3,2023",
+      "text": "STARKTECH presented, Starktech Champ R5- Walk Behind Advanced Poultry Raking Machine to our State Agriculture Minister, hon. Shri Abdul Sattar Ji at Pudhari Agri Pandhari Expo Season 3, 2023, Sangli."
+    },
+    {
+      "name": "Grand Inauguration",
+      "text": "Starktech Ventures Pvt Ltd proudly celebrated the grand inauguration of our state-of-the-art manufacturing unit at RPP ITI, Rajaramnagar, Uran Islampur, Maharashtra 415414 on September 4th, 2023."
+    }
+  ],
+  "about": {
+    "about": "About Us",
+    "companyInfo": "We Starktech Agritech Company incorporated Oct 2022, as Starktech Ventures Pvt. Ltd. We solve the poultry industry's various problems likes, Waste management, Manure management, Floor Management, Ventilation, and Power generation. We working on developing sustainable and affordable equipment by providing marvelous services. Mainly company focused on manufacturing Innovative & hi-tech Poultry farming equipment's. we have a manufacturing domain with expertise in IOT, Automation and controlling, AI, Machine Learning, Robotics, Blockchain, etc We aim to Empower the poultry industry by providing High tech technologies. Starktech has always believed in giving high-quality products with increasing productivity and efficiency at the farm level. Starktech follows four core values Innovation, Quality, Trust, and Accountability which adds value to Indian farmer like Functional, Physical, Social as well as Monetary value."
+  },
+
+  "hero": {
+    "we_revolutionize": "We revolutionize",
+    "poultry": "Poultry",
+    "farming": "Farming",
+    "from_ideas_to_better_farms": "From ideas to better farms – helping poultry grow.",
+    "from_start_to_success": "From start to success – improving poultry farming.",
+    "discover_our_products": "Discover our Products"
+  },
+
+  "allProducts": {
+    "title": "Our Products",
+    "viewDetails": "View Details"
+  },
+
+  "footer": {
+    "we": "We",
+    "innovate": "Innovate",
+    "revolutions": "Revolutions",
+    "companyDescription": "STARKTECH is a Company focused on manufacturing innovative poultry farming hi-tech equipment, aiming to empower the poultry industry through high-tech technologies.",
+    "contactDetails": "Contact Details",
+    "email": "director@starktechventures.com",
+    "phone": "+91 7620864615",
+    "address": "Takari Road, Near RPP ITI College, Rajaramnagar, Uran-Islampur, Sangli, Maharashtra 415409",
+    "usefulLinks": "Useful Links",
+    "products": "Products",
+    "contact": "Contact",
+    "terms": "Terms and Conditions",
+    "getConnected": "Get Connected",
+    "socialFollow": "Follow us on social networks",
+    "copyright": "Copyright © 2025 : Starktech Ventures Private Limited | All rights reserved"
+  },
+  "milestones": {
+    "title": "Milestones",
+    "subtitle": "\"Our first tiny steps that transformed into a meaningful journey with inspiring milestones\"",
+    "steps": [
+      {
+        "date": "17 Oct 2022",
+        "title": "Company Incorporate",
+        "description": "On October 17th, 2022, the foundation stone of Starktech Ventures Pvt. Ltd. was laid in Islampur, marking the beginning of a new era in the world of business. The company was formed with the aim of creating innovative and cutting-edge technologies that can make a difference in people's lives. Starktech Ventures Pvt. Ltd. is a company that is committed to excellence, innovation, and customer satisfaction."
+      },
+      {
+        "date": "17 Feb 2023",
+        "title": "First Product Launch",
+        "description": "On February 17th, 2023, Starktech Ventures Pvt. Ltd. made a significant mark in the technology industry by launching its first product at the IBF Expo. The product, named Champ R5 - Advanced Poultry Raking Machine, was unveiled in the presence of Hon. Jayant Patil and Hon. Amit Deshmukh, who graced the occasion as special guests."
+      },
+      {
+        "date": "1 Apr 2023",
+        "title": "Started In-house Manufacturing",
+        "description": "On April 1st, 2023, Starktech Ventures Pvt. Ltd. reached another milestone by starting its own manufacturing unit in Uran Islampur. The manufacturing unit spans over an area of 1500 sq ft and is equipped with state-of-the-art machinery to facilitate the production of its innovative products."
+      }
+    ]
+  },
+  "visionAndMission": {
+    "vision_mission_title": "Vision and Mission",
+    "vision_title": "Vision",
+    "vision_description": "To be the leading, innovative Poultry Farming equipment manufacturer, focusing on empowering the Poultry industry through technology across the world.",
+    "mission_title": "Mission",
+    "mission_description": "We are preferred for innovation & manufacturing of advanced farming equipment, which shows our affinity, passion & dedication towards society."
+  },
+  "support": {
+    "supported_by_title": "Supported by",
+    "support_description": "\"Our first tiny steps that transformed into a meaningful journey with inspiring milestones\""
+  },
+  "contact": {
+    "contact_us_title": "Contact Us",
+    "contact_us_description": "STARKTECH is a Company focused on manufacturing innovative poultry farming hi-tech equipment, aiming to empower the poultry industry through high-tech technologies.",
+    "contact_details": "Contact Details",
+    "email": "director@starktechventures.com",
+    "phone": "+91 7620864615",
+    "address": "Takari Road, Near RPP ITI College, Rajaramnagar, Uran-Islampur, Sangli, Maharashtra 415409",
+    "submit_button": "Submit Your Details Here",
+    "visit_us": "Visit Us"
+  },
+  "careers": {
+    "careers_title": "Careers",
+    "careers_subtitle_1": "Grow with us!",
+    "careers_subtitle_2": "\"Driving positive change, celebrating each moment, and empowering all to Rise.\"",
+    "open_positions_title": "Open Positions",
+    "open_positions_message": "Please check after few days !!",
+    "apply_now": "Apply Now"
+  },
+
+  "achievements": {
+    "title": "Achievements"
+  }
+}
