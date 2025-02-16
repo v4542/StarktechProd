@@ -8,7 +8,8 @@ import LandingAbout from "./About/LandingAbout";
 
 function About() {
   return (
-    <div>
+    <div className="w-full mt-[95px] md:mt-[120px]">
+     
       <LandingAbout/>
       <Milestones/>
       <Vision/>

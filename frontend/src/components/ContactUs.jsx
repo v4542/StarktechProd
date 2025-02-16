@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import api from './api';
 
 const ContactUs = () => {
   const { t } = useTranslation();
   const [showForm, setShowForm] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -22,6 +24,47 @@ const ContactUs = () => {
     error: null
   });
 
+  const validateForm = () => {
+    // Name validation (at least 2 characters, only letters and spaces)
+    if (!/^[A-Za-z\s]{2,}$/.test(formData.name.trim())) {
+      toast.error('Please enter a valid name (minimum 2 characters, letters only)');
+      return false;
+    }
+
+    // Phone validation (must be 10 digits)
+    if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
+      toast.error('Please enter a valid phone number (10 digits)');
+      return false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      return false;
+    }
+
+    // Inquiry type validation
+    if (!formData.inquiry_type) {
+      toast.error('Please select an inquiry type');
+      return false;
+    }
+
+    // Subject validation (minimum 5 characters)
+    if (formData.subject.trim().length < 5) {
+      toast.error('Subject must be at least 5 characters long');
+      return false;
+    }
+
+    // Message validation (minimum 20 characters)
+    if (formData.message.trim().length < 20) {
+      toast.error('Message must be at least 20 characters long');
+      return false;
+    }
+
+    return true;
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -32,16 +75,28 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (isSubmitting) {
+      return; // Prevent duplicate submissions
+    }
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
     setFormStatus({ loading: true, success: false, error: null });
 
     try {
-      await axios.post(`https://${api}contacts/`, formData);
+      await axios.post(`${api}contacts/`, formData);
       
       setFormStatus({
         loading: false,
         success: true,
         error: null
       });
+
+      toast.success('Message sent successfully!');
 
       // Reset form after successful submission
       setTimeout(() => {
@@ -60,6 +115,7 @@ const ContactUs = () => {
           success: false,
           error: null
         });
+        setIsSubmitting(false);
       }, 2000);
     } catch (err) {
       let errorMessage = 'Failed to submit form. Please try again.';
@@ -79,6 +135,9 @@ const ContactUs = () => {
         success: false,
         error: errorMessage
       });
+
+      toast.error(errorMessage);
+      setIsSubmitting(false);
     }
   };
 
@@ -104,14 +163,14 @@ const ContactUs = () => {
             <div className="flex flex-col space-y-3 lg:space-y-4">
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-lg lg:text-2xl text-gray-600" />
-                <p className="text-sm lg:text-xl md:text-base font-light">
-                  {t("contact.email")}
+                <p className="text-sm lg:text-xl md:text-base text-[#502380] hover:underline font-light">
+                <a href="mailto:director@starktechventures.com">{t("contact.email")}</a>
                 </p>
               </div>
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="text-lg lg:text-2xl text-gray-600" />
-                <p className="text-sm lg:text-xl capitalize md:text-base font-light">
-                  {t("contact.phone")}
+                <p className="text-sm lg:text-xl text-[#502380] hover:underline capitalize md:text-base font-light">
+                <a href="tel:7620864615">{t("contact.phone")}</a>
                 </p>
               </div>
               <div className="flex items-center gap-4">
@@ -228,17 +287,10 @@ const ContactUs = () => {
                 className="w-full p-2 border rounded h-32"
               />
 
-              {formStatus.error && (
-                <div className="text-red-500 text-sm">{formStatus.error}</div>
-              )}
-              {formStatus.success && (
-                <div className="text-green-500 text-sm">Message sent successfully!</div>
-              )}
-
               <button
                 type="submit"
-                disabled={formStatus.loading}
-                className="w-full py-3 bg-[#502380] text-white rounded hover:bg-[#3b1a60] disabled:bg-gray-400 transition-colors duration-300"
+                disabled={isSubmitting || formStatus.loading}
+                className="w-full py-3 bg-[#502380] text-white rounded hover:bg-[#3b1a60] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors duration-300"
               >
                 {formStatus.loading ? 'Sending...' : 'Send Message'}
               </button>

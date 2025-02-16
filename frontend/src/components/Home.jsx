@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import Landing from "./Home/Landing";
 import About from "./Home/About";
 
